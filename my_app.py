@@ -1,4 +1,4 @@
-#from PyQt5.QtWidgets import*
+from PyQt5.QtWidgets import*
 from instr import *
 
 class MainWin(QWidget):
