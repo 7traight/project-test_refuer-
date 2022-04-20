@@ -1,10 +1,6 @@
 from PyQt5.QtWidgets import*
 from instr import *
 
-txt_title = 'Здоровье'
-win_x, win_y = 200, 100
-win_width, win_height = 1000, 600
-
 class MainWin(QWidget):
     def __init__(self):
         super().__init__()
@@ -21,6 +17,6 @@ class MainWin(QWidget):
     def connects(self): 
         pass
 
-    app = QApplication([])
-    mw = MainWin()
-    app.exec_()
+app = QApplication([])
+mw = MainWin()
+app.exec_()
