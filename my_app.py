@@ -13,9 +13,19 @@ class MainWin(QWidget):
         self.resize(win_width, win_height)
         self.move(win_x, win_y)
     def initUI(self): 
-        pass
+        self.layout = QVBoxLayout()
+        self.text_hello = QLabel(txt_hello)
+        self.txt_instruction = QLabel(txt_instruction)
+        self.txt_next = QPushButton(txt_next)
+        self.layout.addWidget(self.text_hello)
+        self.layout.addWidget(self.txt_instruction)
+        self.layout.addWidget(self.txt_next)
+        self.setLayout(self.layout)
     def connects(self): 
-        pass
+        self.txt_next.clicked.connect(self.next_click)
+    def next_click():
+        self.hide()
+        self.tw = TestWin()
     
 app = QApplication([])
 mw = MainWin()
