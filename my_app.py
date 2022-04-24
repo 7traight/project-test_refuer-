@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import*
+from PyQt5.QtWidgets import *
 from instr import *
 
 class MainWin(QWidget):
@@ -23,9 +23,9 @@ class MainWin(QWidget):
         self.setLayout(self.layout)
     def connects(self): 
         self.txt_next.clicked.connect(self.next_click)
-    def next_click():
+    def next_click(self):
         self.hide()
-        self.tw = TestWin()
+        self.mw = MainWin()
     
 app = QApplication([])
 mw = MainWin()
