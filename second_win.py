@@ -3,7 +3,7 @@ from PyQt5.QtGui import*
 from PyQt5.QtCore import*
 from instr import*
 
-class MainWin(QWidget):
+class TestWin(QWidget):
     def __init__(self):
         super().__init__()
         self.set_appear()
@@ -82,7 +82,3 @@ class MainWin(QWidget):
 #
 
 
-
-app = QApplication([])
-mw = MainWin()
-app.exec_()

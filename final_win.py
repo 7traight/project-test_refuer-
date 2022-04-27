@@ -82,9 +82,6 @@ class FinalWin(QWidget):
         self.Layout.addWidget(self.yourIndex, alignment= Qt.AlignCenter)
         self.Layout.addWidget(self.yourResults, alignment= Qt.AlignCenter)
         self.setLayout(self.Layout)
+        self.setStyleSheet('background: pink;')
     def connects(self):
         pass
-
-app = QApplication([])
-fw = FinalWin()
-app.exec_()

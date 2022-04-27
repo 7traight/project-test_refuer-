@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import *
 from instr import *
+from second_win import *
 
 class MainWin(QWidget):
     def __init__(self):
@@ -21,11 +22,12 @@ class MainWin(QWidget):
         self.layout.addWidget(self.txt_instruction)
         self.layout.addWidget(self.txt_next)
         self.setLayout(self.layout)
+        self.setStyleSheet('background: pink;')
     def connects(self): 
         self.txt_next.clicked.connect(self.next_click)
     def next_click(self):
         self.hide()
-        self.mw = MainWin()
+        self.tw = TestWin()
     
 app = QApplication([])
 mw = MainWin()
