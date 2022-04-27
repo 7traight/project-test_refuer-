@@ -86,5 +86,5 @@ class FinalWin(QWidget):
         pass
 
 app = QApplication([])
-fw = FinalWin(13, 1, 1, 1)
+fw = FinalWin()
 app.exec_()
