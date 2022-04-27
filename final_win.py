@@ -5,7 +5,7 @@ from PyQt5.QtCore import *
 class FinalWin(QWidget):
     def __init__(self, age, test1, test2, test3):
         super().__init__()
-        self.age = age
+        self.age = int(age)
         self.test1 = test1
         self.test2 = test2
         self.test3 = test3
