@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import*
 from PyQt5.QtGui import*
 from PyQt5.QtCore import*
 from instr import*
-
+from final_win import*
 class TestWin(QWidget):
     def __init__(self):
         super().__init__()
@@ -81,13 +81,11 @@ class TestWin(QWidget):
 
         self.h_line.addLayout(self.r_line, 50)
         self.setLayout(self.h_line)
-    def connects(self): 
-        ##################################################################################
+    def connects(self):
         self.btn_test1.clicked.connect(self.start_timer1)
         self.btn_test2.clicked.connect(self.start_timer2)
         self.btn_test3.clicked.connect(self.start_timer3)
         self.txt_next.clicked.connect(self.next_click)
-        #####################################################################################################################################
     def timer1Event(self):
         global time
         time = time.addSecs(-1)
@@ -116,8 +114,7 @@ class TestWin(QWidget):
         else:
             self.text_timer3.setStyleSheet("color: rgb(0,0,0)")
         if time.toString("hh:mm:ss") == "00:00:00":
-            self.timer.stop()
-        
+            self.timer.stop()   
     def next_click(self):
         self.hide()
-        self.mw = FinalWin()
+        self.mw = FinalWin(self.line_name2.text(), self.line_name3.text(), self.line_name4.text(), self.line_name5.text())
