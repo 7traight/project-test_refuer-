@@ -10,7 +10,7 @@ class TestWin(QWidget):
         self.initUI()
         self.connects()
         self.show()
-        self.setStyleSheet('background: blue;')
+        self.setStyleSheet('background: blue; font-size: 20px')
     def set_appear(self): 
         self.setWindowTitle(txt_title)
         self.resize(win_width, win_height)
