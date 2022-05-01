@@ -10,7 +10,7 @@ class TestWin(QWidget):
         self.initUI()
         self.connects()
         self.show()
-        self.setStyleSheet('background: blue; font-size: 20px')
+        self.setStyleSheet('background: pink; font-size: 20px')
     def set_appear(self): 
         self.setWindowTitle(txt_title)
         self.resize(win_width, win_height)
@@ -72,14 +72,17 @@ class TestWin(QWidget):
         self.l_line.addWidget(self.line_name4, alignment = Qt.AlignLeft )
 
         self.l_line.addWidget(self.btn_test1, alignment = Qt.AlignCenter)
+        self.btn_test1.setStyleSheet('background: red; font-size: 15px')
         self.l_line.addWidget(self.btn_test2, alignment = Qt.AlignCenter)
+        self.btn_test2.setStyleSheet('background: red; font-size: 15px')
         self.l_line.addWidget(self.btn_test3, alignment = Qt.AlignCenter)
+        self.btn_test3.setStyleSheet('background: red; font-size: 15px')
         self.r_line.addWidget(self.text_timer1, alignment = Qt.AlignRight)
         self.r_line.addWidget(self.text_timer2, alignment = Qt.AlignRight)
         self.r_line.addWidget(self.text_timer3, alignment = Qt.AlignRight)
         self.l_line.addWidget(self.txt_next, alignment = Qt.AlignCenter)
+        self.txt_next.setStyleSheet('background: red; font-size: 15px')
         self.h_line.addLayout(self.l_line, 50)  
-
         self.h_line.addLayout(self.r_line, 50)
         self.setLayout(self.h_line)
     def connects(self):
